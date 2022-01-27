@@ -4,7 +4,9 @@ Whenever you're trying to get information from the web, it's very important to f
 
 The UC Berkeley library has some excellent resources on this topic. Here is a flowchart that can help guide your course of action.
 
-![](figures/scraping_flowchart.png 400x300)
+<!-- ![](figures/scraping_flowchart.png 400x300) -->
+
+<img src="figures/scraping_flowchart.png" width="500" height = "4000>
 
 You can see the library's licensed sources [here](http://guides.lib.berkeley.edu/text-mining).
 
