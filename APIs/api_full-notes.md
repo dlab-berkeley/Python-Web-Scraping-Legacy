@@ -76,54 +76,65 @@ The process of web browsing described above is a close analogue for the process 
 
 3. Whereas the web browser capably parsed and executed the HTML code, **one or more facilities in R, Python, or other programming languages will be necessary for parsing the server response and converting it into a format for local storage** (e.g. matrices, dataframes, databases, lists, etc.).
 
-### QUESTION: How Much Less Popular is Duke Ellington?
 
-If you ask a jazz musician who they feel is the greatest bandleader of all time, there's a pretty good chance they'll mention Duke Ellington.  Though Ellington was at peak popularity from roughly 1930 to 1945, his music is still heard regularly.
+### API Examples
 
-**TASK**: Characterize the popularity of Duke Ellington over the past 15 years.  Specifically, is he "trending"?
+- [**Twitter**](https://developer.twitter.com/) 
+Used for pulling/streaming twitter data, posting status updates, and more. Check out their academic API.
 
-![](figures/ellington.jpg)
+- [**Spotify**](https://developer.spotify.com/)
+Access to rich song data data such as valence, energy, and danceability metrics.
 
-### STEP 1: Finding Data Resources
+-  [**Watson IBM Natural Language Inference API**](https://cloud.ibm.com/apidocs/natural-language-understanding)
+Use state of the art NLP models to analyze text sentiment, extract named entities, and classify text.
 
-To determine the popularity of something, we need a measurement of how frequently or widely it is referenced or encountered.  Moreover, to determine how this popularity changes over time, we need a measurement that is taken repeatedly.
 
-Newspapers are an excellent source of such information.  The frequency with which certain items appear in its pages can be a decent metric of its popularity, and its continual publication creates a built-in time series.  And while there are a variety of newspapers to choose from, we'll be working with the New York Times for a variety of reasons --- including its status as a paper of record, its long publishing history, and (most importantly) its convenient article API.
+
+## NYT API
+
+### All the News That's Fit to Query
+
+The API that we've chosen for our lesson comes from the New York Times. They offer a treasure trove of data about their articles that is easily accessible and available for free!
+
+In this section of the lesson we are going to 
+
+    1. Sign up for developer/API keys — basically a passcode to access the NYT servers.
+    2. Learn about what the NYT has to offer in terms of data.
+    2. Install a 3rd-party Python package called [pynytimes](https://github.com/michadenheijer/pynytimes) which makes it incredibly to make API calls.
+    3. Initialize a connection to their servers using the pynytimes and our keys.
+    4. Make some calls on several of their APIs, parse the resulting data, and conduct some light data analysis on it.
 
 [NYT Article API](http://developer.nytimes.com/)
 
 ![](figures/nytimes_start.png)
 
-### STEP 2: Getting API Access
+## Getting API Access
 
 For most APIs, a key or other user credentials are required for any database querying.  Generally, this requires that you register with the organization.  Most APIs are set up for developers, so you'll likely be asked to register an "application".  All this really entails is coming up with a name for your app/bot/project, and providing your real name, organization, and email.  Note that some more popular APIs (e.g. Twitter, Facebook) will require additional information, such as a web address or mobile number.
 
-Once you've successfully registered, you will be assigned one or more keys, tokens, or other credentials that must be supplied to the server as part of any API call you make.  To make sure that users aren't abusing their data access privileges (e.g. by making many rapid queries), each set of keys will be given several **rate limits** governing the total number of calls that can be made over certain intervals of time.  For the NYT Article API, we have relatively generous rate limits --- 10 calls per second and 10,000 calls per day.
+Once you've successfully registered, you will be assigned one or more keys, tokens, or other credentials that must be supplied to the server as part of any API call you make.  To make sure that users aren't abusing their data access privileges (e.g. by making many rapid queries), each set of keys will be given several **rate limits** governing the total number of calls that can be made over certain intervals of time.  For the NYT Article API, we have relatively generous rate limits --- 10 calls per minute and 4,000 calls per day.
 
 [NYT Article API Keys](http://developer.nytimes.com/signup)
 
-![](figures/nytimes_key.png)
 
-### STEP 3: Learning how to Construct API GET Requests
 
-Likely the most challenging part of using web APIs is learning how to format your GET request URLs.  While there are common architectures for such URLs, each API has its own unique quirks.  For this reason, carefully reviewing the API documentation is critical.
 
-Most GET request URLs for API querying have three or four components:
 
-1. *Base URL*: a link stub that will be at the beginning of all calls to a given API; points the server to the location of an entire database
+    1. Sign up for a new developer account with your email.
+    
+    2. Login with your new username and password.
+    
+    3. Click on your email in the top right corner and you'll see a dropdown menu that says **Apps**
+    
+    4. Click on **Apps** and then click on the **+ New App** button.
+    
+    5. You'll see the page where you'll be prompted to add a name for your App — you can call it anything. Then click enable on the APIs that are enabled in the screenshot. You can enable them all but make sure you at least enable the ones on the screenshot. 
+    
+    ![](figures/nytimes_key.png)
+  
+    6. Once that is done you'll see your app with an api key, you're going to copy and paste that key into the API_workbook notebook.
+    
+    ![](figures/nytimes_app.png)
 
-2. *Search Parameters*: a character string appended to a base URL that tells the server what to extract from the database; basically a series of filters used to point to specific parts of a database
 
-3. *Authenication Key/Token*: a user-specific character string appended to a base URL telling the server who is making the query; allows servers to efficiently manage database access
-
-4. *Response Format*: a character string indicating how the response should be formatted; usually one of .csv, .json, or .xml
-
-Fortunately, the NYT Article API is [very well documented](http://developer.nytimes.com/article_search_v2.json)!
-
-![](figures/nytimes_docs.png)
-
-### STEP 4: Constructing API GET Requests in Python (and R)
-
-See `lecture-code.ipynb` to continue!
-
-Note: We have [supplementary material](Bonus_Materials/1_APIs_in_R.Rmd) to teach you how to construct GET requests in `R`.
+Now we're ready to proceed to the API_workbook notebook and make some calls!
