@@ -132,11 +132,11 @@ Once you've successfully registered, you will be assigned one or more keys, toke
     
     5. You'll see the page where you'll be prompted to add a name for your App — you can call it anything. Then click enable on the APIs that are enabled in the screenshot. You can enable them all but make sure you at least enable the ones on the screenshot. 
     
-![](figures/nytimes_key.png =600x450)
+![](figures/nytimes_app.png)
   
     6. Once that is done you'll see your app with an api key, you're going to copy and paste that key into the API_workbook notebook.
     
-![](figures/nytimes_app.png =600x450)
+![](figures/nytimes_key.png)
 
 
 Now we're ready to proceed to the API_workbook notebook and make some calls!
