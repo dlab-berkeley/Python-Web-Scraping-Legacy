@@ -104,7 +104,7 @@ In this section of the lesson we are going to
     3. Initialize a connection to their servers using the pynytimes and our keys.
     4. Make some calls on several of their APIs, parse the resulting data, and conduct some light data analysis on it.
 
-[NYT Article API](http://developer.nytimes.com/)
+[NYT Developer Page](http://developer.nytimes.com/)
 
 ![](figures/nytimes_start.png)
 
@@ -130,11 +130,11 @@ Once you've successfully registered, you will be assigned one or more keys, toke
     
     5. You'll see the page where you'll be prompted to add a name for your App — you can call it anything. Then click enable on the APIs that are enabled in the screenshot. You can enable them all but make sure you at least enable the ones on the screenshot. 
     
-    ![](figures/nytimes_key.png)
+![](figures/nytimes_key.png)
   
     6. Once that is done you'll see your app with an api key, you're going to copy and paste that key into the API_workbook notebook.
     
-    ![](figures/nytimes_app.png)
+![](figures/nytimes_app.png)
 
 
 Now we're ready to proceed to the API_workbook notebook and make some calls!
