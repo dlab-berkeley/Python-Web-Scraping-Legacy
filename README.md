@@ -15,6 +15,11 @@ This workshop explains the difference between the two, their advantages/disadvan
 
 Basic familiarity with Python is assumed. Understanding the material in the [Python Fundamentals](https://github.com/dlab-berkeley/Python-Fundamentals) and [Python Data Wrangling](https://github.com/dlab-berkeley/Python-Data-Wrangling) workshops highly recommended.
 
+> To best prepare for this workshop we suggest you: 
+>1. Have an **intermediate** knowledge of Python
+>2. Understand at a basic level what HTML and CSS are.
+>3. Understand nested and mixed python data structures, JSON for example.
+
 ### Topics Covered
 
 - How the web works
