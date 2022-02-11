@@ -1,4 +1,7 @@
 # D-Lab's Python Web Scraping Workshop
+
+# Python-Webscraping
+
 API and web scraping workshops
 
 This repository contains the materials for D-Lab’s Python Web Scraping Workshop.
@@ -26,6 +29,17 @@ Basic familiarity with Python is assumed. Understanding the material in the [Pyt
 - HTML / CSS 
 - Webscraping with Beautiful Soup
 - Using a 3rd party Python package to query data from a RESTFUL API
+- Analyzing JSON data queried from APIs
+
+## Prerequisites
+
+This is an intermediate Python workshop. Participants should have significant prior experience with Python and the Pandas library.
+
+### Required Workshops
+
+[Python Fundamentals](https://github.com/dlab-berkeley/Python-Fundamentals)
+
+[Python Data Wrangling](https://github.com/dlab-berkeley/Python-Data-Wrangling-Update)
 
 ## Installation Instructions
 
