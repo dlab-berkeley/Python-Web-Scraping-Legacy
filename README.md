@@ -1,4 +1,4 @@
-# python-data-from-web
+# Python-Webscraping
 API and web scraping workshops
 
 These workshops were originally developed by [Rochelle Terman](https://github.com/rochelleterman).
@@ -16,12 +16,27 @@ This workshop will cover how to extract data from the web using Python. We'll be
 - Using a 3rd party Python package to query data from a API
 - HTML / CSS 
 - Webscraping with Beautiful Soup
+- Analyzing JSON data queried from APIs
 
 ### Requirements
 
 This workshop will be using the Python programming language. See the software requirements [here](B_Tech-Requirements.md).
 
 We will assume a basic knowledge of Python. If you've taken the D-Lab's Python Intensive, that should be sufficient. 
+
+## Prerequisites
+
+This is an intermediate Python workshop. Participants should have significant prior experience with Python and the Pandas library.
+
+### Required Workshops
+
+[Python Fundamentals](https://github.com/dlab-berkeley/Python-Fundamentals)
+
+[Python Data Wrangling](https://github.com/dlab-berkeley/Python-Data-Wrangling-Update)
+
+**Prerequisite workshops**
+
+ * [R Fundamentals](https://github.com/dlab-berkeley/R-Fundamentals) or similar training in R basics.
 
 ## Installation Instructions
 
