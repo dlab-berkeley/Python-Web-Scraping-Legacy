@@ -4,9 +4,7 @@ Whenever you're trying to get information from the web, it's very important to f
 
 The UC Berkeley library has some excellent resources on this topic. Here is a flowchart that can help guide your course of action.
 
-![](figures/scraping_flowchart.png)
-
-
+![](../images/scraping_flowchart.png)
 
 You can see the library's licensed sources [here](http://guides.lib.berkeley.edu/text-mining).
 
@@ -26,15 +24,15 @@ You can see the library's licensed sources [here](http://guides.lib.berkeley.edu
 
 Consider a simple Google search:
 
-![](figures/google_search.png)
+![](../images/google_search.png)
 
 Ever wonder what all that extra stuff in the address bar was all about?  In this case, the full address is Google's way of sending a query to its databases asking requesting information related to the search term "golden state warriors". 
 
-![](figures/google_link.png)
+![](../images/google_link.png)
 
 In fact, it looks like Google makes its query by taking the search terms, separating each of them with a "+", and appending them to the link "https://www.google.com/#q=".  Therefore, we should be able to actually change our Google search by adding some terms to the URL and following the general format...  
 
-![](figures/google_link_change.png)
+![](../images/google_link_change.png)
 
 Learning how to use RESTful APIs is all about learning how to format these URLs so that you can get the response you want.
 
@@ -54,7 +52,7 @@ As you might suspect from the example above, surfing the web is basically equiva
 
 Suppose, for instance, I wanted to look something up on Wikipedia.  My first step would be to open my web browser and type in http://www.wikipedia.org.  Once I hit return, I'd see the page below.  
 
-![](figures/wikipedia.png)
+![](../images/wikipedia.png)
 
 Several different processes occured, however, between me hitting "return" and the page finally being rendered.  In order:
 
@@ -90,8 +88,6 @@ Access to rich song data data such as valence, energy, and danceability metrics.
 -  [**Watson IBM Natural Language Inference API**](https://cloud.ibm.com/apidocs/natural-language-understanding)
 Use state of the art NLP models to analyze text sentiment, extract named entities, and classify text.
 
-
-
 ## NYT API
 
 ### All the News That's Fit to Query
@@ -108,7 +104,7 @@ In this section of the lesson we are going to
 
 [NYT Developer Page](http://developer.nytimes.com/)
 
-![](figures/nytimes_start.png)
+![](../images/nytimes_start.png)
 
 ## Getting API Access
 
@@ -117,10 +113,6 @@ For most APIs, a key or other user credentials are required for any database que
 Once you've successfully registered, you will be assigned one or more keys, tokens, or other credentials that must be supplied to the server as part of any API call you make.  To make sure that users aren't abusing their data access privileges (e.g. by making many rapid queries), each set of keys will be given several **rate limits** governing the total number of calls that can be made over certain intervals of time.  For the NYT Article API, we have relatively generous rate limits --- 10 calls per minute and 4,000 calls per day.
 
 [NYT Article API Keys](http://developer.nytimes.com/signup)
-
-
-
-
 
     1. Sign up for a new developer account with your email.
     
@@ -132,11 +124,11 @@ Once you've successfully registered, you will be assigned one or more keys, toke
     
     5. You'll see the page where you'll be prompted to add a name for your App — you can call it anything. Then click enable on the APIs that are enabled in the screenshot. You can enable them all but make sure you at least enable the ones on the screenshot. 
     
-![](figures/nytimes_app.png)
+![](../images/nytimes_app.png)
   
     6. Once that is done you'll see your app with an api key, you're going to copy and paste that key into the API_workbook notebook.
     
-![](figures/nytimes_key.png)
+![](../images/nytimes_key.png)
 
 
 Now we're ready to proceed to the API_workbook notebook and make some calls!
