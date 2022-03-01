@@ -1,4 +1,4 @@
-### Accessing Data: Some Preliminary Considerations
+# Accessing Data: Some Preliminary Considerations
 
 Whenever you're trying to get information from the web, it's very important to first know whether you're accessing it through appropriate means.
 
@@ -8,19 +8,23 @@ The UC Berkeley library has some excellent resources on this topic. Here is a fl
 
 You can see the library's licensed sources [here](http://guides.lib.berkeley.edu/text-mining).
 
-## What is an API?
+# What is an API?
 
-* API stands for **Application Programming Interface**
+This workshop begins with APIs. You may have heard this terminology in a variety of programming settings. What exactly does it mean?
 
-* Broadly defined: a set of rules and procedures that facilitate interactions between computers and their applications
+* "API" stands for **Application Programming Interface**.
 
-* A very common type of API is the Web API, which (among other things) allows users to query a remote database over the internet
+* Broadly defined, an API is a set of rules and procedures that facilitate interactions between computers and their applications.
 
-* Web APIs take on a variety of formats, but the vast majority adhere to a particular style known as **Representational State Transfer** or **REST**
+* A very common type of API is the Web API, which (among other things) allows users to query a remote database over the internet.
 
-* What makes these "RESTful" APIs so convenient is that we can use them to query databases using URLs 
+* For example, a web service such as Twitter has many databases that may be of use to us: Tweets, Users, Replies, etc. If we want to access some portion of this database that is useful to us, it'd be helpful if there's a set of rules and protocols in place to outline how we access this information. This is the motivation for an API.
 
-### RESTful Web APIs are All Around You...
+* Web APIs take on a variety of formats, but the vast majority adhere to a particular style known as **Representational State Transfer** or **REST**.
+
+* What makes these "RESTful" APIs so convenient is that we can use them to query databases using URLs.
+
+## RESTful Web APIs Are All Around You
 
 Consider a simple Google search:
 
@@ -36,7 +40,7 @@ In fact, it looks like Google makes its query by taking the search terms, separa
 
 Learning how to use RESTful APIs is all about learning how to format these URLs so that you can get the response you want.
 
-### Some Basic Terminology
+## Some Basic Terminology
 
 * **Uniform Resource Location (URL)**: a string of characters that, when interpreted via the Hypertext Transfer Protocol (HTTP), points to a data resource, notably files written in Hypertext Markup Language (HTML) or a subset of a database.  This is often referred to as a "call".
 
@@ -46,7 +50,7 @@ Learning how to use RESTful APIs is all about learning how to format these URLs 
     
     + *HEAD*, *POST*, *PUT*, *DELETE*: other common methods, though mostly never used for database querying.
     
-### How Do GET Requests Work?  A Web Browsing Example
+## How Do GET Requests Work? A Web Browsing Example
 
 As you might suspect from the example above, surfing the web is basically equivalent to sending a bunch of GET requests to different servers and asking for different files written in HTML.
 
@@ -66,7 +70,7 @@ Several different processes occured, however, between me hitting "return" and th
 [1] "<!DOCTYPE html>\n<html lang=\"mul\" dir=\"ltr\">\n<head>\n<!-- Sysops: Please do not edit the main template directly; update /temp and synchronise. -->\n<meta charset=\"utf-8\">\n<title>Wikipedia</title>\n<!--[if lt IE 7]><meta http-equiv=\"imagetoolbar\" content=\"no\"><![endif]-->\n<meta name=\"viewport\" content=\"i"
 ```
 
-### Web Browsing as a Template for RESTful Database Querying
+## Web Browsing as a Template for RESTful Database Querying
 
 The process of web browsing described above is a close analogue for the process of database querying via RESTful APIs, with only a few adjustments:
 
@@ -76,8 +80,7 @@ The process of web browsing described above is a close analogue for the process 
 
 3. Whereas the web browser capably parsed and executed the HTML code, **one or more facilities in R, Python, or other programming languages will be necessary for parsing the server response and converting it into a format for local storage** (e.g. matrices, dataframes, databases, lists, etc.).
 
-
-### API Examples
+## API Examples
 
 - [**Twitter**](https://developer.twitter.com/) 
 Used for pulling/streaming twitter data, posting status updates, and more. Check out their academic API.
@@ -88,19 +91,21 @@ Access to rich song data data such as valence, energy, and danceability metrics.
 -  [**Watson IBM Natural Language Inference API**](https://cloud.ibm.com/apidocs/natural-language-understanding)
 Use state of the art NLP models to analyze text sentiment, extract named entities, and classify text.
 
-## NYT API
+# The New York Times API
 
-### All the News That's Fit to Query
+Now, we turn to our main case study of the API portion: the New York Times API.
 
-The API that we've chosen for our lesson comes from the New York Times. They offer a treasure trove of data about their articles that is easily accessible and available for free!
+## All the News That's Fit to Query
 
-In this section of the lesson we are going to 
+The New York Times offers a treasure trove of data about their articles that is easily accessible and available for free!
 
-    1. Sign up for developer/API keys — basically a passcode to access the NYT servers.
-    2. Learn about what the NYT has to offer in terms of data.
-    2. Install a 3rd-party Python package called [pynytimes](https://github.com/michadenheijer/pynytimes) which makes it incredibly to make API calls.
-    3. Initialize a connection to their servers using the pynytimes and our keys.
-    4. Make some calls on several of their APIs, parse the resulting data, and conduct some light data analysis on it.
+In this section, we'll complete the following steps:
+
+1. Sign up for developer/API keys. These effectively act as a passcode to access the NYT servers.
+2. Learn about what the NYT has to offer in terms of data.
+3. Install a 3rd-party Python package called [`pynytimes`](https://github.com/michadenheijer/pynytimes) which makes it incredibly to make API calls.
+4. Initialize a connection to their servers using the pynytimes and our keys.
+5. Make some calls on several of their APIs, parse the resulting data, and conduct some light data analysis on it.
 
 [NYT Developer Page](http://developer.nytimes.com/)
 
@@ -114,15 +119,15 @@ Once you've successfully registered, you will be assigned one or more keys, toke
 
 [NYT Article API Keys](http://developer.nytimes.com/signup)
 
-    1. Sign up for a new developer account with your email.
-    
-    2. Login with your new username and password.
-    
-    3. Click on your email in the top right corner and you'll see a dropdown menu that says **Apps**
-    
-    4. Click on **Apps** and then click on the **+ New App** button.
-    
-    5. You'll see the page where you'll be prompted to add a name for your App — you can call it anything. Then click enable on the APIs that are enabled in the screenshot. You can enable them all but make sure you at least enable the ones on the screenshot. 
+1. Sign up for a new developer account with your email.
+
+2. Login with your new username and password.
+
+3. Click on your email in the top right corner and you'll see a dropdown menu that says **Apps**
+
+4. Click on **Apps** and then click on the **+ New App** button.
+
+5. You'll see the page where you'll be prompted to add a name for your App — you can call it anything. Then click enable on the APIs that are enabled in the screenshot. You can enable them all but make sure you at least enable the ones on the screenshot. 
     
 ![](../images/nytimes_app.png)
   
