@@ -19,8 +19,6 @@ Basic familiarity with Python is assumed. Understanding the material in the [Pyt
 
 ## Installation Instructions
 
-## Installation Instructions
-
 Anaconda is a useful package management software that allows you to run Python
 and Jupyter notebooks very easily. Installing Anaconda is the easiest way to
 make sure you have all the necessary software to run the materials for this
@@ -99,6 +97,6 @@ Here are other Python workshops offered by the D-Lab:
 
 # Contributors
 
-* ![Rochelle Terman](https://github.com/rochelleterman)
-* ![George McIntire](https://github.com/GeorgeMcIntire)
-* ![Pratik Sachdeva](https://github.com/pssachdeva)
+* [Rochelle Terman](https://github.com/rochelleterman)
+* [George McIntire](https://github.com/GeorgeMcIntire)
+* [Pratik Sachdeva](https://github.com/pssachdeva)
