@@ -1,5 +1,8 @@
 # D-Lab's Python Web Scraping Workshop
 
+[![Datahub](https://img.shields.io/badge/launch-datahub-blue)](https://datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fdlab-berkeley%2FPython-Web-Scraping&urlpath=tree%2FPython-Web-Scraping%2F&branch=main)
+[![Binder](http://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/dlab-berkeley/Python-Web-Scraping/HEAD)
+
 This repository contains the materials for D-Lab’s Python Web Scraping Workshop. Prior experience with Python Fundamentals and Python Data Wrangling is assumed.
 
 ## Workshop Goals
